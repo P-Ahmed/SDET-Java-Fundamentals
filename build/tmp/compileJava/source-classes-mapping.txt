@@ -10,15 +10,15 @@ assignment02_11_08_2021/Assignment02_01.java
  assignment02_11_08_2021.Assignment02_01
 assignment02_11_08_2021/Assignment02_05.java
  assignment02_11_08_2021.Assignment02_05
-Class_2/CheckingLeapYear.java
- Class_2.CheckingLeapYear
+assignment02_11_08_2021/Assignment02_03.java
+ assignment02_11_08_2021.Assignment02_03
 assignment01_07_08_2021/Assignment01_04.java
  assignment01_07_08_2021.Assignment01_04
 assignment01_07_08_2021/Assignment01_03.java
  assignment01_07_08_2021.Assignment01_03
 assignment02_11_08_2021/Assignment02_02.java
  assignment02_11_08_2021.Assignment02_02
-assignment02_11_08_2021/Assignment02_03.java
- assignment02_11_08_2021.Assignment02_03
+assignment02_11_08_2021/Assignment02_02_Alternate.java
+ assignment02_11_08_2021.Assignment02_02_Alternate
 assignment02_11_08_2021/Assignment02_04.java
  assignment02_11_08_2021.Assignment02_04
