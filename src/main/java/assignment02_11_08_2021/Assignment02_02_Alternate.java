@@ -7,13 +7,13 @@ public class Assignment02_02_Alternate {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        System.out.println("Enter your achieved number of course number 1");
+        System.out.println("Enter your achieved number of course number 1:");
         int courseOne = scanner.nextInt();
-        System.out.println("Enter your achieved number of course number 2");
+        System.out.println("Enter your achieved number of course number 2:");
         int courseTwo = scanner.nextInt();
-        System.out.println("Enter your achieved number of course number 3");
+        System.out.println("Enter your achieved number of course number 3:");
         int courseThree = scanner.nextInt();
-        System.out.println("Enter your achieved number of course number 4");
+        System.out.println("Enter your achieved number of course number 4:");
         int courseFour = scanner.nextInt();
 
         Assignment02_02_Alternate obj = new Assignment02_02_Alternate();
@@ -25,7 +25,7 @@ public class Assignment02_02_Alternate {
             System.out.println("Among 4 courses, you have failed in " + count + " courses.");
         }
     }
-git
+
     public double gradeCalculation(int courseNumber){
         if (courseNumber >= 80.00 && courseNumber <= 100.00) {
             return 4.00;
