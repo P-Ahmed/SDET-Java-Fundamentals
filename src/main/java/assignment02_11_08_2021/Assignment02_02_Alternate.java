@@ -1,3 +1,5 @@
+/*2.Write a program to calculate CGPA and find grade from 4 subjects (GPA will based upon your university*/
+
 package assignment02_11_08_2021;
 
 import java.util.Scanner;
