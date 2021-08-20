@@ -10,7 +10,7 @@ public class Assignment04_01 {
     public static void main(String[] args) throws ParseException {
 
         SimpleDateFormat sdf = new SimpleDateFormat("dd-MM-yyyy hh:mm:ss aa"); //12 hours format
-        //SimpleDateFormat sdf = new SimpleDateFormat("dd-MM-yyyy hh:mm:ss"); //24 hours format
+        //SimpleDateFormat sdf = new SimpleDateFormat("dd-MM-yyyy HH:mm:ss"); //24 hours format
 
         Date date = new Date(); //creating date object
         long presentDateTimeStamp = date.getTime(); //Getting timestamp for present date-time
