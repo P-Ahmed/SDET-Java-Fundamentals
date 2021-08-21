@@ -7,31 +7,35 @@ package Assignment04_18_08_2021;
 import java.util.Arrays;
 
 public class Assignment04_03 {
-    public static void main(String[] args) {
+    public static void findingDuplicates(int[] array) {
         int duplicateNumber = 0;
-        int[] array = {10,5,2,3,2,7,7,15,10}  ;
-        Arrays.sort(array);
 
         System.out.print("\nOutput: ");
-        for (int i = 0; i<array.length; i++){
+        for (int i = 0; i < array.length; i++) {
             int counter = 0;
-            for (int j = i+1 ; j< array.length; j++){
-                if (array[i] == array[j]){
+            for (int j = i + 1; j < array.length; j++) {
+                if (array[i] == array[j]) {
                     counter++;
                     duplicateNumber = array[j];
-                }
-                else {
+                } else {
                     continue;
                 }
             }
-            if (counter == 1){
-                System.out.print(duplicateNumber+" ");
-            }
-            else if (counter >=2 ){
-                i = counter+1;
-                System.out.print(duplicateNumber+" ");
+            if (counter == 1) {
+                System.out.print(duplicateNumber + " ");
+            } else if (counter >= 2) {
+                i = counter + 1;
+                System.out.print(duplicateNumber + " ");
             }
         }
         System.out.println();
+    }
+
+    public static void main(String[] args) {
+        int[] array = {10, 5, 2, 3, 2, 7, 7, 15, 10};
+        Arrays.sort(array);
+
+        findingDuplicates(array);
+
     }
 }

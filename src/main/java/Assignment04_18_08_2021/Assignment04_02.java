@@ -6,27 +6,30 @@ import java.util.Arrays;
 import java.util.Scanner;
 
 public class Assignment04_02 {
-    public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
+    static Scanner scanner = new Scanner(System.in);
 
-        System.out.println("How many numbers you wish to input?");
+    public static void arraySortingInDescendingOrder(int[] number) {
+        Arrays.sort(number);
+        for (int i = 0, j = number.length - 1, temp; i < j; i++, j--) {
+            temp = number[i];
+            number[i] = number[j];
+            number[j] = temp;
+        }
+    }
+
+    public static void main(String[] args) {
+        System.out.println("How many numbers you wish to input into array?");
         int number = scanner.nextInt();
 
-        int[] num = new int[number];
+        int[] array = new int[number];
 
         System.out.println("Kindly don't input duplicate numbers!");
-        System.out.println("Input a number and press \"Enter\" key");
+        System.out.println("Input following numbers and press \"Enter\" key!");
         for (int i = 0; i < number; i++) {
-            num[i] = scanner.nextInt();
+            array[i] = scanner.nextInt();
         }
-        Arrays.sort(num);
+        arraySortingInDescendingOrder(array);
 
-        int max = num[0];
-        for (int i = 0; i < num.length; i++) {
-            if (num[i]>max){
-                max = num[i];
-            }
-        }
-        System.out.println("The second max number of the array is: "+num[num.length - 2]);
+        System.out.println("The second largest number of the array is: " + array[1]);
     }
 }

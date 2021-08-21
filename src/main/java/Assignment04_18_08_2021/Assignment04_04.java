@@ -9,22 +9,41 @@ package Assignment04_18_08_2021;
 import java.util.Scanner;
 
 public class Assignment04_04 {
-    public static void main(String[] args) {
-        int[] array = {10, 5, 2, 3, 2, 7, 7, 15, 10};
+    static int number;
+    static int[] array = {10, 5, 2, 3, 2, 7, 7, 15, 10};
 
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("Input the number you wish to find: ");
-        int number = scanner.nextInt();
+    public static int gettingPosition() {
+
         int position = 0;
+        int counter = 0;
 
         for (int i = 0; i < array.length; i++) {
             if (array[i] != number) {
+                counter++;
                 continue;
             } else {
                 position = i;
                 break;
             }
         }
-        System.out.println("Position: " + position);
+        if (counter == array.length) {
+            return -1;
+        } else {
+            return position;
+        }
+    }
+
+    public static void main(String[] args) {
+
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Input the number you wish to find: ");
+        number = scanner.nextInt();
+
+        if (gettingPosition() == -1) {
+            System.out.println("\nUsers inputted number is not found in the array.\noutput: -1 ");
+        } else {
+            System.out.println("\nInput: User inputs " + number);
+            System.out.println("Output: Position: " + gettingPosition());
+        }
     }
 }
