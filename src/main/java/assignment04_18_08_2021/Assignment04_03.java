@@ -2,7 +2,7 @@
 Output: 2, 7, 10
 */
 
-package Assignment04_18_08_2021;
+package assignment04_18_08_2021;
 
 import java.util.Arrays;
 

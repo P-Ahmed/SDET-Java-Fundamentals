@@ -1,6 +1,6 @@
 /*1. Find the date difference (year, day, hour, min, sec) between your birthdate and today*/
 
-package Assignment04_18_08_2021;
+package assignment04_18_08_2021;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;

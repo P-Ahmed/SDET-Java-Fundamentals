@@ -8,7 +8,7 @@ Or you input the amount 165. The output will be:
 5 1
 */
 
-package Assignment04_18_08_2021;
+package assignment04_18_08_2021;
 
 import java.util.Scanner;
 

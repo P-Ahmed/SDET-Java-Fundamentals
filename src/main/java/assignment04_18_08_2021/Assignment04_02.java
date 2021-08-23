@@ -1,6 +1,6 @@
 /*2. Find the second largest number from an array by user input using function*/
 
-package Assignment04_18_08_2021;
+package assignment04_18_08_2021;
 
 import java.util.Arrays;
 import java.util.Scanner;

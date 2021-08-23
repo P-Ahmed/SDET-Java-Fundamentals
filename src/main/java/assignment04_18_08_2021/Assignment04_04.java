@@ -4,7 +4,7 @@ Input: User inputs 7
 Output: Position: 5
 */
 
-package Assignment04_18_08_2021;
+package assignment04_18_08_2021;
 
 import java.util.Scanner;
 
