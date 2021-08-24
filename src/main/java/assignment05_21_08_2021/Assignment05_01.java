@@ -1,3 +1,11 @@
+/*1. Write a program to withdraw money from ATM booth. Save PIN and balance in a json file. Scenario: User goes to an ATM boot.
+Insert card (assume card has inserted) and input correct PIN. If PIN is wrong, system will ask to give correct PIN max 3 times.
+If user inputs wrong PIN 3 times, print that: "Card is blocked". If PIN is correct, then system will give 2 options to user as
+1. Check Balance 2. Withdraw Money. User will choose any option. If user inputs amount that is not divisible by 500, then error
+message will be shown as "Please input amount that is multiply by 500". If user inputs more than balance, print error message as
+"Not enough balance" After withdrawing money successfully, balance will be deducted and update json file. Then User will choose
+option 1 again to check the current balance.*/
+
 package assignment05_21_08_2021;
 
 import org.json.simple.JSONObject;
