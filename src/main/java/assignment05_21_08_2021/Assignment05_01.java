@@ -41,20 +41,18 @@ public class Assignment05_01 {
 
         switch (userInput) {
             case 1:
-                if (GettingBalance() < 500){
+                if (GettingBalance() < 500) {
                     System.out.println("Your balance is less than 500.");
                     System.out.println("Do you wish to deposit money?");
                     System.out.println("1. Yes");
                     System.out.println("0. Leave");
                     int input = scanner.nextInt();
-                    if (input == 1){
+                    if (input == 1) {
                         DepositMoney();
-                    }
-                    else {
+                    } else {
                         System.exit(0);
                     }
-                }
-                else {
+                } else {
                     WithdrawMoney();
                 }
                 break;
@@ -88,20 +86,18 @@ public class Assignment05_01 {
                         CheckBalance();
                         break;
                     case 2:
-                        if (GettingBalance() < 500){
+                        if (GettingBalance() < 500) {
                             System.out.println("Your balance is less than 500.");
                             System.out.println("Do you wish to deposit money?");
                             System.out.println("1. Yes");
                             System.out.println("0. Leave");
                             int input = scanner.nextInt();
-                            if (input == 1){
+                            if (input == 1) {
                                 DepositMoney();
-                            }
-                            else {
+                            } else {
                                 System.exit(0);
                             }
-                        }
-                        else {
+                        } else {
                             WithdrawMoney();
                         }
                         break;
@@ -142,20 +138,18 @@ public class Assignment05_01 {
                     CheckBalance();
                     break;
                 case 2:
-                    if (GettingBalance() < 500){
+                    if (GettingBalance() < 500) {
                         System.out.println("Your balance is less than 500.");
                         System.out.println("Do you wish to deposit money?");
                         System.out.println("1. Yes");
                         System.out.println("0. Leave");
                         int input = scanner.nextInt();
-                        if (input == 1){
+                        if (input == 1) {
                             DepositMoney();
-                        }
-                        else {
+                        } else {
                             System.exit(0);
                         }
-                    }
-                    else {
+                    } else {
                         WithdrawMoney();
                     }
                     break;
@@ -236,20 +230,18 @@ public class Assignment05_01 {
                 break;
             case 2:
                 PinChecking();
-                if (GettingBalance() < 500){
+                if (GettingBalance() < 500) {
                     System.out.println("\nYour balance is less than 500.");
                     System.out.println("Do you wish to deposit money?");
                     System.out.println("1. Yes");
                     System.out.println("0. Leave");
                     int input = scanner.nextInt();
-                    if (input == 1){
+                    if (input == 1) {
                         DepositMoney();
-                    }
-                    else {
+                    } else {
                         System.exit(0);
                     }
-                }
-                else {
+                } else {
                     WithdrawMoney();
                 }
                 break;
