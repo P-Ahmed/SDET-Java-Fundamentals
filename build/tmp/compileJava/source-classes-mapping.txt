@@ -10,8 +10,8 @@ assignment01_07_08_2021/Assignment01_02.java
  assignment01_07_08_2021.Assignment01_02
 assignment01_07_08_2021/Assignment01_05.java
  assignment01_07_08_2021.Assignment01_05
-assignment05_21_08_2021/Assignment05_01.java
- assignment05_21_08_2021.Assignment05_01
+class01_21_08_2021/Assignment05_01_Alternate.java
+ class01_21_08_2021.Assignment05_01_Alternate
 assignment03_14_08_2021/Assignment03_03.java
  assignment03_14_08_2021.Assignment03_03
 assignment02_11_08_2021/Assignment02_03.java
@@ -30,6 +30,8 @@ assignment03_14_08_2021/Assignment03_04.java
  assignment03_14_08_2021.Assignment03_04
 assignment01_07_08_2021/Assignment01_01.java
  assignment01_07_08_2021.Assignment01_01
+assignment05_21_08_2021/Assignment05_02.java
+ assignment05_21_08_2021.Assignment05_02
 assignment03_14_08_2021/Assignment03_01.java
  assignment03_14_08_2021.Assignment03_01
 assignment04_18_08_2021/Assignment04_04.java
@@ -46,5 +48,5 @@ assignment02_11_08_2021/Assignment02_05.java
  assignment02_11_08_2021.Assignment02_05
 assignment02_11_08_2021/Assignment02_02.java
  assignment02_11_08_2021.Assignment02_02
-assignment05_21_08_2021/Assignment05_02.java
- assignment05_21_08_2021.Assignment05_02
+assignment05_21_08_2021/Assignment05_01.java
+ assignment05_21_08_2021.Assignment05_01

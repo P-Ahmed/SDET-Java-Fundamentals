@@ -22,7 +22,7 @@ public class Assignment05_01 {
     static Scanner scanner;
 
     public static long GettingBalance() throws IOException, ParseException {
-        String fileName = "E:\\RoadToSDET\\Projects\\Java Fundamentals\\src\\main\\java\\assignment05_21_08_2021\\AccountInfo.json";
+        String fileName = "json\\AccountInfo.json";
         JSONParser jsonParser = new JSONParser();
         Object object = jsonParser.parse(new FileReader(fileName));
         JSONObject balanceObject = (JSONObject) object;
@@ -198,14 +198,14 @@ public class Assignment05_01 {
         JSONObject accountObject = new JSONObject();
         accountObject.put("pin", "tycoon");
         accountObject.put("balance", amount);
-        FileWriter writer = new FileWriter("E:\\RoadToSDET\\Projects\\Java Fundamentals\\src\\main\\java\\assignment05_21_08_2021\\AccountInfo.json");
+        FileWriter writer = new FileWriter("json\\AccountInfo.json");
         writer.write(accountObject.toJSONString());
         writer.flush();
         writer.close();
     }
 
     public static String ReadJSON() throws IOException, ParseException {
-        String fileName = "E:\\RoadToSDET\\Projects\\Java Fundamentals\\src\\main\\java\\assignment05_21_08_2021\\AccountInfo.json";
+        String fileName = "json\\AccountInfo.json";
         JSONParser jsonParser = new JSONParser();
         Object object = jsonParser.parse(new FileReader(fileName));
         JSONObject pinObject = (JSONObject) object;
