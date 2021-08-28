@@ -22,25 +22,25 @@ public class Assignment05_02 {
         do {
             JSONParser jsonParser = new JSONParser();
             Object obj = jsonParser.parse(new FileReader(fileName));
-            JSONObject studentObj = new JSONObject();
+            JSONObject quesObj = new JSONObject();
 
             Scanner scanner = new Scanner(System.in);
             System.out.println("Enter question number " + numberOfQuestions + ":");
-            studentObj.put("Question", scanner.nextLine());
+            quesObj.put("Question", scanner.nextLine());
             System.out.println("Enter 1st option: ");
-            studentObj.put("Option-1", scanner.nextLine());
+            quesObj.put("Option-1", scanner.nextLine());
             System.out.println("Enter 2nd option: ");
-            studentObj.put("Option-2", scanner.nextLine());
+            quesObj.put("Option-2", scanner.nextLine());
             System.out.println("Enter 3rd option: ");
-            studentObj.put("Option-3", scanner.nextLine());
+            quesObj.put("Option-3", scanner.nextLine());
             System.out.println("Enter 4th option: ");
-            studentObj.put("Option-4", scanner.nextLine());
+            quesObj.put("Option-4", scanner.nextLine());
             System.out.println("Answer: ");
-            studentObj.put("Answer", scanner.nextLine());
+            quesObj.put("Answer", scanner.nextLine());
 
             JSONArray jsonArray = (JSONArray) obj;
             //System.out.print(jsonArray);
-            jsonArray.add(studentObj);
+            jsonArray.add(quesObj);
             FileWriter file = new FileWriter(fileName);
             file.write(jsonArray.toJSONString());
             file.flush();
