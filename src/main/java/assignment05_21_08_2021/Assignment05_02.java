@@ -1,50 +1,108 @@
 package assignment05_21_08_2021;
 
+import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
+import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
 
+import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.Scanner;
 
 public class Assignment05_02 {
-    static Scanner scanner = new Scanner(System.in);
+    static String fileName = "json\\QuestionBank.json";
+    static int numberOfQuestions = 1;
+    static int answerCounter = 0;
+    static int min = 0, max = 0;
+    static int questionsToBeAnswered = 5;
 
     public static void WriteJSONQues() throws IOException, ParseException {
-        JSONObject quesObject = new JSONObject();
-        FileWriter writer = new FileWriter("E:\\RoadToSDET\\Projects\\Java Fundamentals\\src\\main\\java\\assignment05_21_08_2021\\QuestionBank.json");
+        char ch;
+        do {
+            JSONParser jsonParser = new JSONParser();
+            Object obj = jsonParser.parse(new FileReader(fileName));
+            JSONObject studentObj = new JSONObject();
 
-//        System.out.println("How many questions do you wish to enter?");
-//        int quesCounter = scanner.nextInt();
+            Scanner scanner = new Scanner(System.in);
+            System.out.println("Enter question number " + numberOfQuestions + ":");
+            studentObj.put("Question", scanner.nextLine());
+            System.out.println("Enter 1st option: ");
+            studentObj.put("Option-1", scanner.nextLine());
+            System.out.println("Enter 2nd option: ");
+            studentObj.put("Option-2", scanner.nextLine());
+            System.out.println("Enter 3rd option: ");
+            studentObj.put("Option-3", scanner.nextLine());
+            System.out.println("Enter 4th option: ");
+            studentObj.put("Option-4", scanner.nextLine());
+            System.out.println("Answer: ");
+            studentObj.put("Answer", scanner.nextLine());
 
-        for (int i = 1; i <= 2; i++) {
-            System.out.println("Enter the question: ");
-            String question = scanner.nextLine();
-            quesObject.put("Question", question);
+            JSONArray jsonArray = (JSONArray) obj;
+            //System.out.print(jsonArray);
+            jsonArray.add(studentObj);
+            FileWriter file = new FileWriter(fileName);
+            file.write(jsonArray.toJSONString());
+            file.flush();
+            file.close();
+            System.out.println("Saved!");
+            System.out.println(jsonArray);
+            System.out.println("\nDo you want to add more questions?[y/n]");
+            ch = scanner.next().charAt(0);
+            numberOfQuestions++;
+        } while (ch != 'n');
+    }
 
-            System.out.println("Enter the option one: ");
-            String option1 = scanner.nextLine();
-            quesObject.put("Option-1", option1);
-
-            System.out.println("Enter the option two: ");
-            String option2 = scanner.nextLine();
-            quesObject.put("Option-2", option2);
-
-            System.out.println("What is the answer?: ");
-            String answer = scanner.nextLine();
-            quesObject.put("Answer", answer);
-
-            writer.write(quesObject.toJSONString());
-            writer.flush();
+    public static void ReadJSONQues() throws IOException, ParseException {
+        JSONParser jsonParser = new JSONParser();
+        Object obj = jsonParser.parse(new FileReader(fileName));
+        JSONArray jsonArray = (JSONArray) obj;
+        max = jsonArray.size();
+        for (int i = 1; i <= questionsToBeAnswered; i++) {
+            int random = (int) (Math.random() * ((max - min) + min));
+            JSONObject json = (JSONObject) jsonArray.get(random);
+            String question = (String) json.get("Question");
+            String option1 = (String) json.get("Option-1");
+            String option2 = (String) json.get("Option-2");
+            String option3 = (String) json.get("Option-3");
+            String option4 = (String) json.get("Option-4");
+            String  answer = (String) json.get("Answer");
+            System.out.println("Question: " + question);
+            System.out.println("Option - 1: " + option1);
+            System.out.println("Option - 2: " + option2);
+            System.out.println("Option - 3: " + option3);
+            System.out.println("Option - 4: " + option4);
+            System.out.println("Input your choice. 1/2/3/4?");
+            Scanner scanner = new Scanner(System.in);
+            String  choice = scanner.next();
+            if (choice.equals(answer)) {
+                System.out.println("Your answer is correct!\n");
+                answerCounter++;
+            } else {
+                System.out.println("Your answer is wrong!\n");
+            }
         }
-
-//        FileWriter writer = new FileWriter("E:\\RoadToSDET\\Projects\\Java Fundamentals\\src\\main\\java\\assignment05_21_08_2021\\QuestionBank.json");
-//        writer.write(quesObject.toJSONString());
-//        writer.flush();
-        writer.close();
     }
 
     public static void main(String[] args) throws IOException, ParseException {
-        WriteJSONQues();
+
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("\nWelcome to the CTFL demo test!");
+        System.out.println("1. Start the test!");
+        System.out.println("2. Write questions in to the Question Bank");
+        System.out.println("0. Leave");
+        int readWriteChoice = scanner.nextInt();
+
+        switch (readWriteChoice){
+            case 1:
+                ReadJSONQues();
+                System.out.println("You have gotten " + answerCounter + " out of " + questionsToBeAnswered + ".");
+                break;
+            case 2:
+                WriteJSONQues();
+                break;
+            default:
+                System.exit(0);
+        }
     }
 }
